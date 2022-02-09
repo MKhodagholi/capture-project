@@ -3,69 +3,53 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
   return (
-    <>
-      <Faq>
-        <h2>
-          Any Quesitons <span>FAQ</span>
-        </h2>
-        <div className="question">
-          <Toggle>
-            {" "}
-            <h4>How Do I Start?</h4>
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corporis, consequatur?
-              </p>
-            </div>
-            <div className="faq-line"></div>
-          </Toggle>
+    <Faq>
+      <h2>
+        Any Quesitons <span>FAQ</span>
+      </h2>
+      <AnimateSharedLayout>
+        <Toggle title="How I Do Start?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Corporis, consequatur?
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
+      <Toggle title="Daily Scheduale">
+        <div className="answer">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
+            consequatur?
+          </p>
         </div>
-        <Toggle>
-          <div className="question">
-            <h4>Daily Scheduale</h4>
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corporis, consequatur?
-              </p>
-            </div>
-            <div className="faq-line"></div>
-          </div>
-        </Toggle>
-        <Toggle>
-          <div className="question">
-            <h4>Diffrent Payment Methods</h4>
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corporis, consequatur?
-              </p>
-            </div>
-            <div className="faq-line"></div>
-          </div>
-        </Toggle>
-        <Toggle>
-          <div className="question">
-            <h4>What Products Do You Offer?</h4>
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Corporis, consequatur?
-              </p>
-            </div>
-            <div className="faq-line"></div>
-          </div>
-        </Toggle>
-      </Faq>
-    </>
+      </Toggle>
+      <Toggle title="Diffrent Payment Methods">
+        <div className="answer">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
+            consequatur?
+          </p>
+        </div>
+      </Toggle>
+      <Toggle title="What Products Do You Offer?">
+        <div className="answer">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
+            consequatur?
+          </p>
+        </div>
+      </Toggle>
+    </Faq>
   );
 };
 
